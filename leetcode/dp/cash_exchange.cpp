@@ -2,6 +2,22 @@
 #include <vector>
 using namespace std;
 
+/*
+ * Problem:
+ * Given different values of coins and an amount of money,
+ * find the minimum number of coins to exchange that amount of money
+ *
+ * Solution:
+ * We set dp[i] as the minimum number of coins for i dollars
+ * dp[0] = 0;
+ * dp[i] = min{dp[i-coin]} + 1, where coin is in coins and i-coin >= 0
+ * finally, return dp[amount];
+ *
+ * Complexity:
+ * Time: O(n*m)
+ * Space: O(m), where n is the size of coins and m is the amount of money
+ * (As you can see, m is not a size, but a value. So it is pseudo-polynomial)
+ */
 const int INF = 99999;
 
 int main() {

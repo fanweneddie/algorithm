@@ -3,6 +3,20 @@
 #include <cstdlib>
 using namespace std;
 
+/*
+ * Problem:
+ * given an array, find the top-k max element
+ *
+ * Solution:
+ * Continue to do partition in this array.
+ * If the position of pivot element is size - k, then return that pivot element
+ *
+ * Complexity:
+ * Time: if we pick a random pivot during partition, then the expected T(n) = O(n),
+ *          (where n is the size of the array)
+ * Space: O(1)
+ */
+
 // partition nums[low, high] and return the position i of pivot element s.t.
 // all elements in nums[low, i-1] <= pivot element and
 // all elements in nums[i+1, high] >= pivot element

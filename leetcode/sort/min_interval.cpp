@@ -11,6 +11,7 @@ using namespace std;
  * We just sort the array and find the neighboring gap one by one
  *
  * Time Complexity: O(nlgn), where n is the size of array
+ *
  */
 
 const int INF = 99999;

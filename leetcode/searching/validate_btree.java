@@ -68,7 +68,7 @@ class Solution {
         if (leftChild[current] != -1) {
             flag_child &= DFS(leftChild[current], visited, leftChild, rightChild);
         }
-        if (rightChild[current] != -1) {
+        if (rightChild[current] != -1 && flag_child) {
             flag_child &= DFS(rightChild[current], visited, leftChild, rightChild);
         }
         return flag_child;
